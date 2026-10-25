@@ -1,0 +1,196 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="100%" height="100%">
+  <defs>
+    <!-- Left banner gradient -->
+    <linearGradient id="sidebarGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#DEE7F2" />
+      <stop offset="35%" stop-color="#C5D5E8" />
+      <stop offset="100%" stop-color="#E9F0F8" />
+    </linearGradient>
+
+    <!-- Ribbon gradient -->
+    <linearGradient id="ribbonGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#36495E" />
+      <stop offset="100%" stop-color="#263445" />
+    </linearGradient>
+
+    <!-- Guilloche Security Pattern -->
+    <pattern id="guilloche" width="120" height="120" patternUnits="userSpaceOnUse">
+      <circle cx="60" cy="60" r="50" fill="none" stroke="#E2EAF4" stroke-width="0.75" />
+      <circle cx="60" cy="60" r="40" fill="none" stroke="#EBF1F8" stroke-width="0.75" />
+      <circle cx="60" cy="60" r="30" fill="none" stroke="#E2EAF4" stroke-width="0.75" />
+      <circle cx="60" cy="60" r="20" fill="none" stroke="#EBF1F8" stroke-width="0.75" />
+      <path d="M 0 60 Q 30 10, 60 60 T 120 60" fill="none" stroke="#E2EAF4" stroke-width="0.6" opacity="0.7" />
+      <path d="M 0 60 Q 30 110, 60 60 T 120 60" fill="none" stroke="#E2EAF4" stroke-width="0.6" opacity="0.7" />
+    </pattern>
+  </defs>
+
+  <!-- Base Certificate Canvas -->
+  <rect width="1200" height="900" fill="#FFFFFF" />
+  
+  <!-- Outer hairline security border -->
+  <rect x="1" y="1" width="1198" height="898" fill="none" stroke="#D5DCE5" stroke-width="2" />
+
+  <!-- Background Guilloche watermark pattern on right area -->
+  <rect x="270" y="200" width="930" height="700" fill="url(#guilloche)" opacity="0.75" />
+
+  <!-- Elaborate Guilloche rosettes around signature and bottom right -->
+  <g transform="translate(900, 520)" stroke="#D8E3F0" stroke-width="0.8" fill="none" opacity="0.65">
+    <ellipse cx="0" cy="0" rx="220" ry="140" transform="rotate(0)" />
+    <ellipse cx="0" cy="0" rx="220" ry="140" transform="rotate(20)" />
+    <ellipse cx="0" cy="0" rx="220" ry="140" transform="rotate(40)" />
+    <ellipse cx="0" cy="0" rx="220" ry="140" transform="rotate(60)" />
+    <ellipse cx="0" cy="0" rx="220" ry="140" transform="rotate(80)" />
+    <ellipse cx="0" cy="0" rx="220" ry="140" transform="rotate(100)" />
+    <ellipse cx="0" cy="0" rx="220" ry="140" transform="rotate(120)" />
+    <ellipse cx="0" cy="0" rx="220" ry="140" transform="rotate(140)" />
+    <ellipse cx="0" cy="0" rx="220" ry="140" transform="rotate(160)" />
+  </g>
+
+  <!-- ========================================== -->
+  <!-- LEFT SIDEBAR / BLUE BRANDING STRIPE -->
+  <!-- ========================================== -->
+  <g id="left-sidebar">
+    <!-- Top blue field -->
+    <path d="M 0 0 L 235 0 L 235 400 L 0 350 Z" fill="url(#sidebarGrad)" />
+    <!-- Bottom lighter field -->
+    <path d="M 0 350 L 235 400 L 235 900 L 0 900 Z" fill="#E8EFF7" opacity="0.7" />
+
+    <!-- Coursera Seal at top -->
+    <g transform="translate(117, 120)">
+      <!-- Outer dotted circle -->
+      <circle cx="0" cy="0" r="78" fill="none" stroke="#2D3B48" stroke-width="1.5" stroke-dasharray="3 3" />
+      <circle cx="0" cy="0" r="74" fill="#FFFFFF" stroke="#2D3B48" stroke-width="2.5" />
+      <circle cx="0" cy="0" r="54" fill="#FFFFFF" stroke="#2D3B48" stroke-width="1.5" />
+
+      <!-- Seal Arc text top -->
+      <path id="seal-text-path-top" d="M -60 0 A 60 60 0 0 1 60 0" fill="none" />
+      <text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="700" fill="#2D3B48" letter-spacing="2" text-anchor="middle">
+        <textPath href="#seal-text-path-top" startOffset="50%">
+          LEARNING WITHOUT LIMITS
+        </textPath>
+      </text>
+
+      <!-- Coursera Wordmark -->
+      <text x="0" y="5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="19" font-weight="800" fill="#0056D2" text-anchor="middle" letter-spacing="-0.5">
+        coursera
+      </text>
+
+      <!-- Seal Arc text bottom -->
+      <path id="seal-text-path-bottom" d="M -62 0 A 62 62 0 0 0 62 0" fill="none" />
+      <text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="7.5" font-weight="700" fill="#2D3B48" letter-spacing="1.5" text-anchor="middle">
+        <textPath href="#seal-text-path-bottom" startOffset="50%">
+          PROFESSIONAL CERTIFICATE
+        </textPath>
+      </text>
+    </g>
+
+    <!-- Dark Ribbon: "7 Courses" -->
+    <path d="M 0 248 L 240 248 L 234 286 L 0 286 Z" fill="url(#ribbonGrad)" />
+    <!-- Small fold accent -->
+    <path d="M 234 286 L 240 248 L 240 290 Z" fill="#1C2734" />
+    <text x="117" y="272" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">
+      7 Courses
+    </text>
+
+    <!-- 7 Courses Syllabus List -->
+    <g transform="translate(28, 430)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#1E293B">
+      <text x="0" y="0">AI Fundamentals</text>
+      <text x="0" y="28">AI for Brainstorming and</text>
+      <text x="0" y="44">Planning</text>
+      <text x="0" y="76">AI for Research and Insights</text>
+      <text x="0" y="108">AI for Writing and</text>
+      <text x="0" y="124">Communicating</text>
+      <text x="0" y="156">AI for Content Creation</text>
+      <text x="0" y="188">AI for Data Analysis</text>
+      <text x="0" y="220">AI for App Building</text>
+    </g>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- MAIN CERTIFICATE BODY -->
+  <!-- ========================================== -->
+  <g transform="translate(295, 0)">
+    <!-- Google 4-Color 'G' Logo Box -->
+    <g transform="translate(0, 30)">
+      <rect x="0" y="0" width="180" height="180" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" />
+      <g transform="translate(90, 90) scale(3.2)">
+        <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+        <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+        <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" />
+        <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" />
+      </g>
+    </g>
+
+    <!-- Issue Date -->
+    <text x="0" y="272" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="17" font-weight="600" fill="#111111">
+      Jun 20, 2026
+    </text>
+
+    <!-- Learner Name -->
+    <text x="0" y="335" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="36" font-weight="800" fill="#111111" letter-spacing="-0.5">
+      MINN THANT HMUE
+    </text>
+
+    <!-- Subtext -->
+    <text x="0" y="380" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="400" fill="#222222">
+      has successfully completed the online Professional Certificate
+    </text>
+
+    <!-- Certificate Title: "Google AI" -->
+    <text x="0" y="445" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="46" font-weight="800" fill="#111111" letter-spacing="-1">
+      Google AI
+    </text>
+
+    <!-- Competencies & Skills Description Paragraph -->
+    <g transform="translate(0, 480)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16.5" font-weight="400" fill="#222222" letter-spacing="0.1">
+      <text x="0" y="0">Those who earn the Google AI Professional Certificate are fluent in</text>
+      <text x="0" y="26">AI, and have completed 7 courses demonstrating their ability to</text>
+      <text x="0" y="52">apply AI to the skills where AI is transforming work: Brainstorming,</text>
+      <text x="0" y="78">Research, Communication, Content Creation, Data Analysis, and</text>
+      <text x="0" y="104">coding. They have built a portfolio of 20+ artifacts using AI, and vibe</text>
+      <text x="0" y="130">coded a custom AI solution. They prompt effectively, evaluate</text>
+      <text x="0" y="156">outputs, and leverage AI tools responsibly to solve real workplace</text>
+      <text x="0" y="182">challenges.</text>
+    </g>
+
+    <!-- Signature Block (Top-right) -->
+    <g transform="translate(560, 275)">
+      <!-- Signature script representation -->
+      <path d="M 10 20 Q 30 -5 50 18 Q 70 30 90 10 Q 110 -2 130 18 Q 140 10 160 16" fill="none" stroke="#1E293B" stroke-width="2.2" stroke-linecap="round" />
+      <path d="M 35 15 Q 40 38 45 42" fill="none" stroke="#1E293B" stroke-width="1.8" stroke-linecap="round" />
+      <path d="M 95 12 Q 102 32 108 34" fill="none" stroke="#1E293B" stroke-width="1.8" stroke-linecap="round" />
+      <text x="0" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14.5" font-weight="600" fill="#1E293B">
+        Amanda Brophy
+      </text>
+      <text x="0" y="72" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="400" fill="#334155">
+        Global Director of
+      </text>
+      <text x="0" y="92" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="400" fill="#334155">
+        Google Career
+      </text>
+      <text x="0" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="400" fill="#334155">
+        Certificates
+      </text>
+    </g>
+
+    <!-- Bottom Legal Disclaimer -->
+    <g transform="translate(0, 835)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5" font-weight="400" fill="#64748B">
+      <text x="0" y="0">This certificate attests to the learner's completion of an online program delivered via Coursera. It does not constitute</text>
+      <text x="0" y="14">formal enrollment at any university or entity and does not itself grant academic credit, grades, or a degree. Institutions</text>
+      <text x="0" y="28">or organizations may, at their discretion, recognize this learning toward their own programs or credentials.</text>
+    </g>
+
+    <!-- Bottom Right Verification Link -->
+    <g transform="translate(560, 825)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+      <text x="0" y="0" font-size="12" font-weight="500" fill="#334155">
+        Verify this certificate at:
+      </text>
+      <text x="0" y="20" font-size="12" font-weight="600" fill="#0056D2" text-decoration="underline">
+        https://coursera.org/verify/professio
+      </text>
+      <text x="0" y="36" font-size="12" font-weight="600" fill="#0056D2" text-decoration="underline">
+        nal-cert/545Z2IG6REOZ
+      </text>
+    </g>
+  </g>
+</svg>
